@@ -6,14 +6,6 @@ import (
 	"github.com/gbrlsnchs/jwt/v3"
 )
 
-/*
-import jwt from 'jsonwebtoken'
-  const token = jwt.sign({
-    embed: '',
-    sub: ''
-  }, 'YOUR_FLATFILE_PRIVATE_KEY')
-*/
-
 type Payload struct {
 	Embed string `json:"embed"`
 	Sub string	`json:"sub"`
