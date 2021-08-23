@@ -19,10 +19,6 @@ func main() {
 		Sub:   "maire@flatfile.io",
 	}
 
-	token, err := jwt.Sign(payload, hs)
-	if err != nil {
-		log.Fatal("error signing jwt")
-	}
-
+	token, _ := jwt.Sign(payload, hs)
 	log.Println(token)
 }
