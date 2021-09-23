@@ -1,3 +1,16 @@
-# Build
+# Get started with Flatfile SDK
 
-`go build -o example *.go`
+## Step 1: Create embed
+
+1. Go to the [Flatfile app](https://app.flatfile.io/)
+2. Create your Flatfile account (if you haven't already).
+3. Create and configure your embed.
+
+## Step 2: Configure server.js
+
+1. Open `main.go`
+2. Replace `YOUR_EMBED_ID` with your embed id and `YOUR_PRIVATE_KEY` with your private key.
+
+## Step 3: Run it
+
+1. `go run main.go` will start the server on port 4242 after which you would be able launch SDK.

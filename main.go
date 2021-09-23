@@ -13,13 +13,13 @@ type Payload struct {
 	Sub   string `json:"sub"`
 }
 
-var hs = jwt.NewHS256([]byte("PRIVATE_KEY_HERE"))
+var hs = jwt.NewHS256([]byte("YOUR_PRIVATE_KEY"))
 
 func main() {
 
 	service := func(w http.ResponseWriter, r *http.Request) {
 		payload := Payload{
-			Embed: "EMBED_ID_HERE",
+			Embed: "YOUR_EMBED_ID",
 			Sub:   "your.user@email.com",
 		}
 
