@@ -17,7 +17,7 @@ var hs = jwt.NewHS256([]byte("YOUR_PRIVATE_KEY"))
 
 func main() {
 
-	service := func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		payload := Payload{
 			Embed: "YOUR_EMBED_ID",
 			Sub:   "your.user@email.com",
@@ -32,9 +32,7 @@ func main() {
 		}
 
 		tmpl.Execute(w, string(token))
-	}
-
-	http.HandleFunc("/", service)
+	})
 
 	log.Println("Listening on :3000...")
 	err := http.ListenAndServe(":3000", nil)
